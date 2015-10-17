@@ -19,11 +19,12 @@ class Loja extends CI_Controller {
      * map to /index.php/welcome/<method_name>
      * @see http://codeigniter.com/user_guide/general/urls.html
      */
-    public function index() {
+    public function produtos() {
         $this->load->helper('html');
         $this->load->helper('url');
         $this->load->view('templates/header');
         $this->load->view('templates/menu');
+        $this->load->view('produtos');
         $this->load->view('templates/footer');
     }
 

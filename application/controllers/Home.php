@@ -24,7 +24,7 @@ class Home extends CI_Controller {
         $this->load->helper('url');
         $this->load->view('templates/header');
         $this->load->view('templates/menu');
-        $this->load->view('welcome_message');
+        $this->load->view('home');
         $this->load->view('templates/footer');
     }
 

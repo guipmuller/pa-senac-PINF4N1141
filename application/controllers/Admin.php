@@ -2,7 +2,7 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Cadastro extends CI_Controller {
+class Admin extends CI_Controller {
 
     /**
      * Index Page for this controller.
@@ -21,6 +21,7 @@ class Cadastro extends CI_Controller {
      */
     public function index() {
         $this->load->helper('html');
+        $this->load->helper('url');
         $this->load->view('templates/header');
         $this->load->view('templates/menu');
         $this->load->view('templates/footer');
