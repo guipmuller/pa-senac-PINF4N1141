@@ -1,10 +1,28 @@
-<html>
-    <head>
-        <link href="../../../assets/css/bootstrap.css" rel="stylesheet" type="text/css"/>
-        <link href="../../../assets/css/styles.css" rel="stylesheet" type="text/css"/>
-        <title>SaciShop</title>
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?><!DOCTYPE html>
 
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <?php echo link_tag('/assets/css/bootstrap.css'); ?>
+        <?php echo link_tag('/assets/css/styles.css'); ?>
+        <title>SaciShop</title>
     </head>
     <body>
-
-        <h1><?php echo $title; ?></h1>
+        <div class="container">
+            <div class="body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <?php
+                        $image_properties = array(
+                            'src' => '/assets/img/he1.jpg',
+                            'width' => '100%'
+                        );
+                        ?>
+                        <?php echo img($image_properties); ?>
+                        <h1>SaciShop</h1>
+                    </div>
+                </div>
+                <br>
