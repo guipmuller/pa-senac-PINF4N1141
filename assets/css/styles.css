@@ -1,9 +1,23 @@
 .container{
     background-color: #900;
-
+    border-bottom: #000;
+    border-color: white;
 }
-
 body{
-    background-image: url(../img/bg6.jpg);
-    text-align: center;
+    background-image: url(../img/bg7.jpg);
+    text-align: center; 
+}
+a:hover{
+    color: silver;
+}
+a:active{
+    color: tomato;
+}
+::selection{
+    background-color: lightpink;
+    color: white;
+}
+::-moz-selection {
+	background-color: lightpink;
+	color: white;
 }

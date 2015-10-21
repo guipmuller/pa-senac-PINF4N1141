@@ -26,6 +26,22 @@
         <br>guilhermepmuller@gmail.com
         <br>&copy; 2015
         <p>Página carregada em <strong>{elapsed_time}</strong> segundos. <?php echo (ENVIRONMENT === 'development') ? 'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
+        <?php
+                        $image_properties1 = array(
+                            'src' => '/assets/img/rs1.png',
+                            'width' => '25%',
+                            'href' => 'http://www.facebook.com/sacishop'
+                        );
+                        ?>
+                        <?php echo img($image_properties1); ?>
+        <?php
+                        $image_properties2 = array(
+                            'src' => '/assets/img/rs2.png',
+                            'width' => '25%',
+                            'href' => 'http://www.twitter.com/sacishop'
+                        );
+                        ?>
+                        <?php echo img($image_properties2); ?>
     </div>
 </div>
 </div>
