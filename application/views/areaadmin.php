@@ -9,4 +9,3 @@ $atts = array('class' => 'btn btn-danger');
         <?php echo anchor('loja/produtos', 'Clientes', $atts); ?>
     </div>
 </div>
-<br>

@@ -24,6 +24,7 @@ class Admin extends CI_Controller {
         $this->load->helper('url');
         $this->load->view('templates/header');
         $this->load->view('templates/menu');
+        $this->load->view('areaadmin');
         $this->load->view('templates/footer');
     }
 

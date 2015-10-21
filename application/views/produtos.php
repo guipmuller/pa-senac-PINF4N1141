@@ -2,7 +2,7 @@
 <?php
                         $image_properties = array(
                             'src' => '/assets/img/ex1loja.jpg',
-                            'width' => '100%'
+                            'width' => '50%'
                         );
                         ?>
                         <?php echo img($image_properties); ?>

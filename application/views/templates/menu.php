@@ -9,4 +9,3 @@ $atts = array('class' => 'btn btn-danger');
         <?php echo anchor('sobre/index', 'Sobre', $atts); ?>
     </div>
 </div>
-<br>
