@@ -3,7 +3,10 @@
 }
 body{
     background-color: #8B3A3A;
-    text-align: center; 
+    text-align: center;
+}
+a:visited{
+    color: lightyellow;
 }
 a:hover{
     color: silver;
@@ -18,4 +21,28 @@ a:active{
 ::-moz-selection {
     background-color: lightpink;
     color: white;
+}
+
+.btn-primary{
+    color: black;
+    background-color: goldenrod;
+    border-color: goldenrod;
+
+}
+.btn-primary:hover{
+    color: black;
+    background-color: darkgoldenrod;
+    border-color: darkgoldenrod;
+}
+
+.btn-info{
+    color: black;
+    background-color: silver;
+    border-color: silver;
+
+}
+.btn-info:hover{
+    color: black;
+    background-color: darkgrey;
+    border-color: darkgrey;
 }

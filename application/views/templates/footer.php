@@ -1,3 +1,5 @@
+<br>
+<br>
 <div class="row">
     <div class="col-lg-6">
         <div class="form-group">
@@ -6,7 +8,7 @@
         </div>
         <div class="form-group">
             <label for="inputPassword">Senha:</label>
-            <input type="password" class="form-control" name="senha" id="inputPassword" placeholder="Password">
+            <input type="password" class="form-control" name="senha" id="inputPassword" placeholder="Senha">
         </div>
         <button class="btn btn-danger">Login</button>
         <button class="btn btn-danger disabled">Sair</button>
@@ -25,21 +27,21 @@
         <br>&copy; 2015
         <p>Página carregada em <strong>{elapsed_time}</strong> segundos. <?php echo (ENVIRONMENT === 'development') ? 'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
         <?php
-                        $image_properties1 = array(
-                            'src' => '/assets/img/rs1.png',
-                            'width' => '25%',
-                            'href' => 'http://www.facebook.com/sacishop'
-                        );
-                        ?>
-                        <?php echo img($image_properties1); ?>
+        $image_properties1 = array(
+            'src' => '/assets/img/rs1.png',
+            'width' => '25%',
+            'href' => 'http://www.facebook.com/sacishop'
+        );
+        ?>
+        <?php echo img($image_properties1); ?>
         <?php
-                        $image_properties2 = array(
-                            'src' => '/assets/img/rs2.png',
-                            'width' => '25%',
-                            'href' => 'http://www.twitter.com/sacishop'
-                        );
-                        ?>
-                        <?php echo img($image_properties2); ?>
+        $image_properties2 = array(
+            'src' => '/assets/img/rs2.png',
+            'width' => '25%',
+            'href' => 'http://www.twitter.com/sacishop'
+        );
+        ?>
+        <?php echo img($image_properties2); ?>
     </div>
 </div>
 </div>

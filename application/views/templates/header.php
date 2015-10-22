@@ -25,3 +25,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <?php $atts = array('class' => 'h1'); ?>
                         <?php echo anchor('home/index', 'SaciShop', $atts); ?>
                     </div>
+                </div>
+
