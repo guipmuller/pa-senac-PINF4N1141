@@ -4,27 +4,48 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin extends CI_Controller {
 
-    /**
-     * Index Page for this controller.
-     *
-     * Maps to the following URL
-     * 		http://example.com/index.php/welcome
-     * 	- or -
-     * 		http://example.com/index.php/welcome/index
-     * 	- or -
-     * Since this controller is set as the default controller in
-     * config/routes.php, it's displayed at http://example.com/
-     *
-     * So any other public methods not prefixed with an underscore will
-     * map to /index.php/welcome/<method_name>
-     * @see http://codeigniter.com/user_guide/general/urls.html
-     */
     public function index() {
         $this->load->helper('html');
         $this->load->helper('url');
         $this->load->view('templates/header');
         $this->load->view('templates/menu');
         $this->load->view('areaadmin');
+        $this->load->view('templates/footer');
+    }
+
+    public function cliente() {
+        $this->load->helper('html');
+        $this->load->helper('url');
+        $this->load->view('templates/header');
+        $this->load->view('templates/menu');
+        $this->load->view('clientes/listacliente');
+        $this->load->view('templates/footer');
+    }
+
+    public function produtos() {
+        $this->load->helper('html');
+        $this->load->helper('url');
+        $this->load->view('templates/header');
+        $this->load->view('templates/menu');
+        $this->load->view('produtos/listaproduto');
+        $this->load->view('templates/footer');
+    }
+
+    public function clientes() {
+        $this->load->helper('html');
+        $this->load->helper('url');
+        $this->load->view('templates/header');
+        $this->load->view('templates/menu');
+        $this->load->view('clientes/listacliente');
+        $this->load->view('templates/footer');
+    }
+
+    public function criaproduto() {
+        $this->load->helper('html');
+        $this->load->helper('url');
+        $this->load->view('templates/header');
+        $this->load->view('templates/menu');
+        $this->load->view('produtos/criaproduto');
         $this->load->view('templates/footer');
     }
 

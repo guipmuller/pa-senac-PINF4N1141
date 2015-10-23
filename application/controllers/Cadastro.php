@@ -2,14 +2,14 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Loja extends CI_Controller {
+class Cadastro extends CI_Controller {
 
-    public function produtos() {
+    public function index() {
         $this->load->helper('html');
         $this->load->helper('url');
         $this->load->view('templates/header');
         $this->load->view('templates/menu');
-        $this->load->view('produtos');
+        $this->load->view('cadastro');
         $this->load->view('templates/footer');
     }
 

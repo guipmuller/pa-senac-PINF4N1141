@@ -23,26 +23,6 @@ a:active{
     color: white;
 }
 
-.btn-primary{
-    color: black;
-    background-color: goldenrod;
-    border-color: goldenrod;
-
-}
-.btn-primary:hover{
-    color: black;
-    background-color: darkgoldenrod;
-    border-color: darkgoldenrod;
-}
-
-.btn-info{
-    color: black;
-    background-color: silver;
-    border-color: silver;
-
-}
-.btn-info:hover{
-    color: black;
-    background-color: darkgrey;
-    border-color: darkgrey;
+#filebutton{
+    color: white;
 }
