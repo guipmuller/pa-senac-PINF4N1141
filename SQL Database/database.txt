@@ -1,0 +1,13 @@
+CREATE SCHEMA `sacishop` ;
+
+
+CREATE TABLE `sacishop`.`clientes` (
+  `idcli` INT NOT NULL AUTO_INCREMENT,
+  `nomecli` VARCHAR(45) NOT NULL,
+  `logincli` VARCHAR(45) NOT NULL,
+  `cpfcli` VARCHAR(45) NOT NULL,
+  `emailcli` VARCHAR(45) NOT NULL,
+  `senhacli` VARCHAR(45) NOT NULL,
+  `enderecocli` VARCHAR(100) NOT NULL,
+  `admin` CHAR(1) NULL,
+  PRIMARY KEY (`idcli`));
