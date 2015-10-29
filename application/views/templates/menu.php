@@ -3,11 +3,11 @@ $atts = array('class' => 'btn btn-danger');
 ?>
 <div class="row">
     <div class="col-lg-12">
-        <?php echo anchor('home/index', 'Home', $atts); ?>
-        <?php echo anchor('Cadastro/index', 'Quero Me Cadastrar', $atts); ?>
-        <?php echo anchor('loja/produtos', 'Loja', $atts); ?>
-        <?php echo anchor('carrinho/mostra', 'Carrinho', $atts); ?>
-        <?php echo anchor('sobre/index', 'Sobre', $atts); ?>
+        <?php echo anchor('Home/index', 'Home', $atts); ?>
+        <?php echo anchor('Pessoas/novo', 'Quero Me Cadastrar', $atts); ?>
+        <?php echo anchor('Produtos/loja', 'Loja', $atts); ?>
+        <?php echo anchor('Produtos/carrinho', 'Carrinho', $atts); ?>
+        <?php echo anchor('Sobre/index', 'Sobre', $atts); ?>
     </div>
 </div>
 <br>

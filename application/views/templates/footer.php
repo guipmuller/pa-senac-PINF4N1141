@@ -10,7 +10,10 @@
             <label for="inputPassword">Senha:</label>
             <input type="password" class="form-control" name="senha" id="inputPassword" placeholder="Senha">
         </div>
-        <button class="btn btn-danger">Login</button>
+        <?php
+        $atts = array('class' => 'btn btn-default');
+        ?>
+        <?php echo anchor('Admin/index', 'Login', $atts); ?>
         <button class="btn btn-danger disabled">Sair</button>
         <div class="form-group">
             <div class="checkbox">
