@@ -31,6 +31,20 @@ class Produtos extends CI_Controller {
         $this->load->view('templates/footer');
     }
 
+    public function salvar_novo() {
+        $this->load->helper('html');
+        $this->load->helper('url');
+        $this->load->database();
+        $data1 = array(
+            'nome' => $this->input->post('nome'),
+            'preco' => $this->input->post('preco'),
+            'descricao' => $this->input->post('descricao'),
+            'imagem' => $this->input->post('imagem'),
+        );
+        $this->db->insert('produtos', $data1);
+        redirect('/produtos/lista', 'location', 301);
+    }
+
     public function lista() {
         $this->load->helper('html');
         $this->load->helper('url');

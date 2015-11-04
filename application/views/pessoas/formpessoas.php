@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
-        <h2>CADASTRO</h2>
+        <h1>Cadastro de Cliente</h1>
         <form id="cadastro" method="post" action="<?php echo base_url('pessoas/salvar_novo') ?>">
             <div class="form-group">
                 <label for="inputName">Nome Completo:</label>
