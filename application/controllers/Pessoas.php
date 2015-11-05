@@ -18,12 +18,21 @@ class Pessoas extends CI_Controller {
     }
 
     public function lista() {
+        //consulta do bd
+        $this->load->library('pessoas');
+
+        $pessoas = $this->db->select();
+
+        //echo '<pre>';
+        //var_dump($pessoas);
+        //exit;
+
+
         $this->load->helper('html');
         $this->load->helper('url');
         $this->load->view('templates/header');
         $this->load->view('templates/menu');
-        $this->load->view('pessoas/listapessoas',
-        );
+        $this->load->view('pessoas/listapessoas', $pessoas);
         $this->load->view('templates/footer');
     }
 
@@ -46,21 +55,22 @@ class Pessoas extends CI_Controller {
     }
 
     public function editar() {
-        $this->load->helper('html');
-        $this->load->helper('url');
-        $this->load->database();
-        $data = array(
-            'nome' => $this->input->post('nome'),
-            'login' => $this->input->post('login'),
-            'cpf' => $this->input->post('cpf'),
-            'data' => $this->input->post('data'),
-            'email' => $this->input->post('email'),
-            'senha' => $this->input->post('senha'),
-            'confirmasenha' => $this->input->post('confirmasenha'),
-            'endereco' => $this->input->post('endereco'),
-        );
-        $this->db->update('pessoas', $data);
-        redirect('/pessoas/listapessoas', 'location', 301);
+        exit;
+        /* $this->load->helper('html');
+          $this->load->helper('url');
+          $this->load->database();
+          $data = array(
+          'nome' => $this->input->post('nome'),
+          'login' => $this->input->post('login'),
+          'cpf' => $this->input->post('cpf'),
+          'data' => $this->input->post('data'),
+          'email' => $this->input->post('email'),
+          'senha' => $this->input->post('senha'),
+          'confirmasenha' => $this->input->post('confirmasenha'),
+          'endereco' => $this->input->post('endereco'),
+          );
+          $this->db->update('pessoas', $data);
+          redirect('/pessoas/listapessoas', 'location', 301); */
     }
 
     public function sucesso() {
