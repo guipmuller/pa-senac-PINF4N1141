@@ -11,11 +11,17 @@ $attsExcluir = array('class' => 'btn btn-danger btn-xs');
         echo anchor('Pessoas/novo', 'Criar', $attsCriar);
         ?>
         <ul class="lista">
-            <?php foreach ($pessoas as $pessoa) { ?>
+            <?php
+            // echo '<pre>';
+            // var_dump($pessoas);
+            // exit;
+
+            foreach ($pessoas as $pessoa) {
+                ?>
                 <li>
                     <?php echo $pessoa['nome']; ?> (<?php echo $pessoa['email']; ?>)
-                    <?php echo anchor('pessoas/editar/' . $pessoa['id'], 'Editar', $attsEditar); ?>
-                    <?php echo anchor('pessoas/excluir/' . $pessoa['id'], 'Excluir', $attsExcluir); ?>
+                    <?php //echo anchor('pessoas/editar/' . $pessoa['id'], 'Editar', $attsEditar); ?>
+                    <?php //echo anchor('pessoas/excluir/' . $pessoa['id'], 'Excluir', $attsExcluir); ?>
                 </li>
             <?php } ?>
         </ul>
