@@ -22,8 +22,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         );
                         ?>
                         <?php echo img($image_properties); ?>
-                        <?php $atts = array('class' => 'h1'); ?>
-                        <?php echo anchor('home/index', 'SaciShop', $atts); ?>
+                        <div class="titulosite">
+                            <?php $atts = array('class' => 'h1'); ?>
+                            <?php echo anchor('home/index', 'SaciShop', $atts); ?>
+                        </div>
                     </div>
                 </div>
 

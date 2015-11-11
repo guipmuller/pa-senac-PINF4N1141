@@ -18,16 +18,7 @@ class Pessoas extends CI_Controller {
     }
 
     public function lista() {
-        //consulta do bd
-        //$this->load->library('pessoas');
-        //echo '<pre>';
-        //
-      //exit;
         $pessoas['pessoas'] = $this->db->get('pessoas')->result_array();
-
-        // echo '<pre>';
-        // var_dump($pessoas);
-        // exit;
         $this->load->helper('html');
         $this->load->helper('url');
         $this->load->view('templates/header');
@@ -35,36 +26,6 @@ class Pessoas extends CI_Controller {
         $this->load->view('pessoas/listapessoas', $pessoas);
         $this->load->view('templates/footer');
     }
-
-    /*
-      public function lista() {
-      //consulta do bd
-      //$pessoas = query(select id, nome, ... from ...)
-      //echo '<pre>';
-      ////var_dump($pessoas);
-      //exit;
-
-
-      $this->load->helper('html');
-      $this->load->helper('url');
-      $this->load->view('templates/header');
-      $this->load->view('templates/menu');
-      $this->load->view('pessoas/listapessoas', array(
-      'pessoas' => array(
-      array(
-      'id' => 1,
-      'nome' => 'fulano',
-      'email' => 'blablabla@gmail.com'
-      ),
-      array(
-      'id' => 2,
-      'nome' => 'beltranop',
-      'email' => 'beltranop@asdadas.com'
-      )
-      )
-      ));
-      $this->load->view('templates/footer');
-      } */
 
     public function salvar_novo() {
         $this->load->helper('html');
@@ -84,8 +45,13 @@ class Pessoas extends CI_Controller {
         redirect('/pessoas/sucesso', 'location', 301);
     }
 
-    public function editar() {
-        exit;
+    public function editar($id) {
+        $this->load->helper('html');
+        $this->load->helper('url');
+        $this->load->view('templates/header');
+        $this->load->view('templates/menu');
+        $this->load->view('pessoas/formpessoas');
+        $this->load->view('templates/footer');
         /* $this->load->helper('html');
           $this->load->helper('url');
           $this->load->database();

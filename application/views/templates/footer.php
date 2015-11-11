@@ -1,6 +1,4 @@
-<br>
-<br>
-<div class="row">
+<div class="row" id="rodape">
     <div class="col-lg-6 col-md-6 col-sm-6">
         <div class="form-group">
             <label for="inputEmail">Email:</label>
