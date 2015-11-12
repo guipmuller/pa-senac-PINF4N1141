@@ -32,26 +32,16 @@ class Produtos extends CI_Controller {
     }
 
     public function editar($id) {
-        $editarprodutos['produtos'] = $this->db->get('produtos')->result_array();
+        $editarprodutos['produto'] = $this->db->get_where('produtos', array('idprodutos' => $id))->result_array();
         $this->load->helper('html');
         $this->load->helper('url');
         $this->load->view('templates/header');
         $this->load->view('templates/menu');
         $this->load->view('produtos/formprodutos', $editarprodutos);
-        //$this->load->view('produtos/formprodutos', [
-        //    'produto' =>
-        //    [
-        //        'id' => $id,
-        //        'nome' => 'nome legal',
-        //        'preco' => '10,99',
-        //        'desc' => 'kdfjsl dfjksdl fsjdfl',
-        //    ]
-        //]);
         $this->load->view('templates/footer');
     }
 
     public function salvar_novo() {
-        $this->load->helper('html');
         $this->load->helper('url');
         $this->load->database();
         $data1 = array(
@@ -65,16 +55,25 @@ class Produtos extends CI_Controller {
     }
 
     public function atualizar() {
-        $this->load->helper('html');
         $this->load->helper('url');
         $this->load->database();
+        $id = $this->input->post('id');
         $data2 = array(
             'nome' => $this->input->post('nome'),
             'preco' => $this->input->post('preco'),
             'descricao' => $this->input->post('descricao'),
             'imagem' => $this->input->post('imagem'),
         );
+        $this->db->where('idprodutos', $id);
         $this->db->update('produtos', $data2);
+//        var_dump($this->db);
+        redirect('/produtos/lista', 'location', 301);
+    }
+
+    public function deletar($id) {
+        $this->load->helper('url');
+        $this->load->database();
+        $this->db->delete('produtos', array('idprodutos' => $id));
         redirect('/produtos/lista', 'location', 301);
     }
 

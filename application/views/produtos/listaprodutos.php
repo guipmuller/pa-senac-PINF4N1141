@@ -17,7 +17,7 @@ $attsExcluir = array('class' => 'btn btn-danger btn-xs');
                 <li>
                     <?php echo $produto['nome']; ?> (<?php echo $produto['preco']; ?>)
                     <?php echo anchor('produtos/editar/' . $produto['idprodutos'], 'Editar', $attsEditar); ?>
-                    <?php echo anchor('produtos/excluir/' . $produto['idprodutos'], 'Excluir', $attsExcluir); ?>
+                    <?php echo anchor('produtos/deletar/' . $produto['idprodutos'], 'Excluir', $attsExcluir); ?>
                 </li>
             <?php } ?>
         </ul>
