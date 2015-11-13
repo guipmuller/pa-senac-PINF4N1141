@@ -31,16 +31,6 @@ class Produtos extends CI_Controller {
         $this->load->view('templates/footer');
     }
 
-    public function editar($id) {
-        $editarprodutos['produto'] = $this->db->get_where('produtos', array('idprodutos' => $id))->result_array();
-        $this->load->helper('html');
-        $this->load->helper('url');
-        $this->load->view('templates/header');
-        $this->load->view('templates/menu');
-        $this->load->view('produtos/formprodutos', $editarprodutos);
-        $this->load->view('templates/footer');
-    }
-
     public function salvar_novo() {
         $this->load->helper('url');
         $this->load->database();
@@ -52,6 +42,16 @@ class Produtos extends CI_Controller {
         );
         $this->db->insert('produtos', $data1);
         redirect('/produtos/lista', 'location', 301);
+    }
+
+    public function editar($id) {
+        $editarprodutos['produto'] = $this->db->get_where('produtos', array('idprodutos' => $id))->result_array();
+        $this->load->helper('html');
+        $this->load->helper('url');
+        $this->load->view('templates/header');
+        $this->load->view('templates/menu');
+        $this->load->view('produtos/formprodutos', $editarprodutos);
+        $this->load->view('templates/footer');
     }
 
     public function atualizar() {
@@ -66,7 +66,6 @@ class Produtos extends CI_Controller {
         );
         $this->db->where('idprodutos', $id);
         $this->db->update('produtos', $data2);
-//        var_dump($this->db);
         redirect('/produtos/lista', 'location', 301);
     }
 

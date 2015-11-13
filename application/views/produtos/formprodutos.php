@@ -2,14 +2,10 @@
     <div class="col-lg-8 col-lg-offset-2 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
         <h1>Cadastro de Produto</h1>
         <form id="cadastro" method="post" action="<?php echo base_url(isset($produto[0]['idprodutos']) ? 'produtos/atualizar' : 'produtos/salvar_novo') ?>">
+            <input type="hidden" name="id" value="<?php echo (isset($produto[0]['idprodutos']) ? $produto[0]['idprodutos'] : '') ?>">
             <div class="form-group">
-                <input type="hidden" name="id" value="<?php echo (isset($produto[0]['idprodutos']) ? $produto[0]['idprodutos'] : '') ?>">
                 <label for="inputName">Nome:</label>
-                <input type="name" class="form-control" name="nome" id="textarea" placeholder="Nome" value="<?php
-                if (isset($produto[0]['nome'])) {
-                    echo $produto[0]['nome'];
-                }
-                ?>">
+                <input type="name" class="form-control" name="nome" id="textarea" placeholder="Nome" value="<?php echo (isset($produto[0]['nome']) ? $produto[0]['nome'] : '') ?>">
             </div>
             <div class="form-group">
                 <label for="inputName">Preço:</label>
