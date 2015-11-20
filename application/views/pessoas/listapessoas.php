@@ -16,8 +16,8 @@ $attsExcluir = array('class' => 'btn btn-danger btn-xs');
                 ?>
                 <li>
                     <?php echo $pessoa['nome']; ?> (<?php echo $pessoa['email']; ?>)
-                    <?php echo anchor('pessoas/editar/' . $pessoa['idPessoas'], 'Editar', $attsEditar); ?>
-                    <?php echo anchor('pessoas/deletar/' . $pessoa['idPessoas'], 'Excluir', $attsExcluir); ?>
+                    <?php echo anchor('pessoas/editar/' . $pessoa['idpessoas'], 'Editar', $attsEditar); ?>
+                    <?php echo anchor('pessoas/deletar/' . $pessoa['idpessoas'], 'Excluir', $attsExcluir); ?>
                 </li>
             <?php } ?>
         </ul>

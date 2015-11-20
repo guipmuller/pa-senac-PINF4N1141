@@ -41,7 +41,7 @@ class Produtos extends CI_Controller {
             'imagem' => $this->input->post('imagem'),
         );
         $this->db->insert('produtos', $data1);
-        redirect('/produtos/lista', 'location', 301);
+        redirect('/produtos/lista');
     }
 
     public function editar($id) {
@@ -66,14 +66,14 @@ class Produtos extends CI_Controller {
         );
         $this->db->where('idprodutos', $id);
         $this->db->update('produtos', $data2);
-        redirect('/produtos/lista', 'location', 301);
+        redirect('/produtos/lista');
     }
 
     public function deletar($id) {
         $this->load->helper('url');
         $this->load->database();
         $this->db->delete('produtos', array('idprodutos' => $id));
-        redirect('/produtos/lista', 'location', 301);
+        redirect('/produtos/lista');
     }
 
     public function lista() {

@@ -4,6 +4,36 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Pessoas extends CI_Controller {
 
+//    public function login($email, $senha) {
+//        $this->db->where('email', $email);
+//        $this->db->where('senha', $senha);
+//        isset($_SESSION['email','senha']);
+//        if ($pessoa[0]['idpessoas'] = true) {
+//            $this->session->user_login = true;
+//            $this->session->user_id = $this->db->pessoas['idpessoas'];
+//            $this->session->user_nome = $this->db->pessoas['email'];
+//            $this->session->user_email = $this->db->pessoas['senha'];
+//            redirect('/home/index');
+//        } else {
+//            $this->session->user_login = false;
+//            $this->session->user_id = $this->db->pessoas['idpessoas'];
+//            $this->session->user_nome = $this->db->pessoas['email'];
+//            $this->session->user_email = $this->db->pessoas['senha'];
+//            redirect('/home/index');
+//        }
+//
+//criar ação para login (vai receber dados do form)
+//nesta ação (function), buscar no banco por email recebido + sha1(senha)
+//se usuario existir:
+//redireciona sem 301
+//senao
+//volta mensagem de erro
+//function logoff
+//limpa user_logado da sessão
+//limpa dados usuario sessão
+//redireciona
+//    }
+
     public function novo() {
         $this->load->helper('html');
         $this->load->helper('url');
@@ -24,11 +54,10 @@ class Pessoas extends CI_Controller {
             'data' => $this->input->post('data'),
             'email' => $this->input->post('email'),
             'senha' => $this->input->post('senha'),
-            'confirmasenha' => $this->input->post('confirmasenha'),
             'endereco' => $this->input->post('endereco'),
         );
         $this->db->insert('pessoas', $data);
-        redirect('/pessoas/sucesso', 'location', 301);
+        redirect('/pessoas/sucesso');
     }
 
     public function editar($id) {
@@ -52,19 +81,21 @@ class Pessoas extends CI_Controller {
             'data' => $this->input->post('data'),
             'email' => $this->input->post('email'),
             'senha' => $this->input->post('senha'),
-            'confirmasenha' => $this->input->post('confirmasenha'),
             'endereco' => $this->input->post('endereco'),
         );
         $this->db->where('idpessoas', $id);
         $this->db->update('pessoas', $data1);
-        redirect('/pessoas/lista', 'location', 301);
+        redirect('/pessoas/lista');
     }
 
     public function deletar($id) {
         $this->load->helper('url');
         $this->load->database();
-        $this->db->delete('pessoas', array('idpessoas' => $id));
-        redirect('/pessoas/lista', 'location', 301);
+        if ($this->db->delete('pessoas', array('idpessoas' => $id))) {
+            redirect('/pessoas/lista');
+        } else {
+            var_dump($this->db);
+        }
     }
 
     public function lista() {
